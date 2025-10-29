@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media escolar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" ></script>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a class="back-btn" href="../Menu"><img src="../MediaEscolar/Images/retorno.png" alt="voltar" width="50px" height="auto"></a>
+    <img class="logo" src="../MediaEscolar/Images/media-escolar.png" alt="logo" width="150px" height="auto">
+    <main>
+    <h1>Média escolar</h1>
+    <label for="n1">Nota 1:</label>
+    <input type="number" placeholder="Insira a primeira nota" id="n1">
+     <label for="n2">Nota 2:</label>
+    <input type="number" placeholder="Insira a segunda nota" id="n2">
+     <label for="n3">Nota3:</label>
+    <input type="number" placeholder="Insira a terceira nota" id="n3">
+    <label for="n4">Nota 4:</label>
+    <input type="number" placeholder="Insira a quarta nota" id="n4">
+    <label for="n5">Nota 5:</label>
+    <input type="number" placeholder="Insira a quinta nota" id="n5">
+    <button onclick="media()">Calcular Média</button>
+    <p id="respMedia"></p>
+    <p id="msg"></p>
+    </main>
+</body>
+<script src="script.js" ></script>
+</html>
