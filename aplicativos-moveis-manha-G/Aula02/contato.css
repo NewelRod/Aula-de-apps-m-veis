@@ -1,75 +1,88 @@
-:root{
-    --darkBlue: #000814;
-    --mediumBlue: #001D3D;
-    --lightblue: #2484de;
-    --darkYellow: #FFC300;
-    --lightYellow: #FFD60A;
+:root {
+    --dark-blue: #000814;
+    --medium-blue: #001D3D;
+    --light-blue: #2484de;
+    --dark-yellow: #FFC300;
+    --light-yellow: #FFD60A;
     --white: #ffffff;
- }
-*{
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color:var(--darkBlue);
+body {
+    background-color: var(--dark-blue);
     color: var(--white);
     min-height: 100vh;
-    height: auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2vh;
-    height: 90vh;
+    min-height: 90vh;
+    flex: 1;
 }
 
-.back-btn{
+.back-btn {
     position: absolute;
     top: 10px;
     left: 10px;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
 }
 
-.wrap-contato{
-    background-color: var(--lightblue);
+.back-btn:hover {
+    opacity: 0.8;
+}
+
+.wrap-contato {
+    background-color: var(--light-blue);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2vh;
+    gap: 1.5vh;
     padding: 30px;
     border-radius: 20px;
     width: 80%;
+    max-width: 500px;
 }
 
-.wrap-contato label{
-    width: 100%;
+.wrap-contato label {
     text-align: left;
-    margin-bottom: -15px;
     padding-left: 12px;
     font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
 }
 
-
-.wrap-contato input{
-    padding: 10px;
-    border-radius: 999px;
+.wrap-contato input {
+    padding: 12px 15px;
+    border-radius: 50%;
     border: none;
     width: 100%;
     font-size: 1.2rem;
+    transition: all 0.3s ease;
 }
 
-.wrap-contato button{
-    padding: 10px;
-    border-radius: 999px;
+.wrap-contato input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 214, 10, 0.3);
+}
+
+.wrap-contato button {
+    padding: 12px;
+    border-radius: 50%;
     border: none;
     width: 100%;
-    background-color: var(--mediumBlue);
+    background-color: var(--medium-blue);
     color: var(--white);
     font-size: 1.2rem;
     font-weight: bold;
@@ -78,6 +91,30 @@ main{
     align-items: center;
     justify-content: center;
     gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+.wrap-contato button:hover {
+    background-color: var(--light-yellow);
+    color: var(--medium-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
 
+.wrap-contato button:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+    .wrap-contato {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .wrap-contato label,
+    .wrap-contato input,
+    .wrap-contato button {
+        font-size: 1rem;
+    }
+}
